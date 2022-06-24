@@ -14,7 +14,7 @@ function ViewDefects (props){
         <form className="form-select"> 
         
             <select className="form-select mr-2" name="priority">
-            <option selected>Priority</option>
+            <option key="selected">Priority</option>
                 <option value="All">All</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -22,7 +22,7 @@ function ViewDefects (props){
             </select>
             
             <select className="form-select" name="category">
-            <option selected>Category</option>
+            <option key="selected">Category</option>
                 <option value="UI">UI</option>
                 <option value="Functional">Functional</option>
                 <option value="Change Request">Change Request</option>
@@ -47,7 +47,7 @@ function ViewDefects (props){
 
     {props.defectsData.map( dvalue => {
       return (
-      <tr>
+      <tr key={dvalue.id}>
       <th scope="row">{dvalue.category}</th>
       <td>{dvalue.descripton}</td>
       <td>{dvalue.priority}</td>
